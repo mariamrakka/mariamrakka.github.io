@@ -68,11 +68,10 @@ a:hover {
 
 .link {
   display: inline-block;
-  width: 40px;
-  height: auto;
+  
 }
 
 .logo {
-  /* object-fit: contain; */
-  max-width: max-content;
+  width: 2px;
+  height: auto;
 }
