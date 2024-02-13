@@ -73,13 +73,20 @@
     
     <div class="publications">
       <h2>Publications</h2>
-      <ul>
-        <!-- Your Google Scholar publications will go here -->
-        <li>Publication 11</li>
-        <li>Publication 22</li>
-        <!-- Add more publications as needed -->
+      <ul id="publication-list">
+        <!-- Your publications will be dynamically added here -->
       </ul>
     </div>
   </main>
+  <script>
+    // Fetch publications from Google Scholar API
+    fetch('https://api.scholar.google.com/citations?user=Fb9_7EMAAAAJ&hl=en&cstart=0&pagesize=100')
+      .then(response => response.json())
+      .then(data => {
+        const publications = data.citations.map(citation => `<li>${citation.title}</li>`);
+        document.getElementById('publication-list').innerHTML = publications.join('');
+      })
+      .catch(error => console.error('Error fetching publications:', error));
+  </script>
 </body>
 </html>
