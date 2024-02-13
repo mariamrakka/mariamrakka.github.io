@@ -21,6 +21,10 @@ h2 {
   color: #7e57c2;
 }
 
+header h1 {
+  font-size: 50px; /* Adjust the font size as needed */
+}
+
 .bio {
   margin-bottom: 20px;
 }
