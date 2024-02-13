@@ -73,5 +73,6 @@ a:hover {
 }
 
 .logo {
-  object-fit: contain;
+  /* object-fit: contain; */
+  max-width: max-content;
 }
