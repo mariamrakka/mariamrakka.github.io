@@ -68,8 +68,8 @@ a:hover {
 
 .link {
   display: inline-block;
-  width: 2%;
-  margin: auto;
+  width: 40px;
+  height: auto;
 }
 
 .logo {
