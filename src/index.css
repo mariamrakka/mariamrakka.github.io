@@ -1,0 +1,335 @@
+:root {
+    --bg-color: #ffffff;
+    --card-bg: #dfdfdf;
+    --text-color: #000000;
+    --accent-color: #ffffff;
+    --border-color: #888888;
+}
+
+* {
+    -webkit-user-select: none; /* Chrome, Safari, Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard syntax */
+    pointer-events: none;
+}
+
+a,
+button,
+input,
+textarea {
+    pointer-events: auto;
+}
+
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+p,
+li {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--bg-color);
+    background-image: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.5)
+    );
+    box-shadow: inset 0 0.2rem 0.5rem rgba(255, 255, 255, 0.1),
+        0 0.4rem 0.6rem rgba(0, 0, 0, 0.5);
+    border-bottom: 0.1rem solid var(--border-color);
+}
+
+.navbar-nav .nav-link {
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.05);
+    color: var(--accent-color);
+}
+
+.centered-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.centered-nav .nav-link {
+    margin: 0.1rem;
+}
+
+@media (max-width: 992px) {
+    .centered-nav {
+        position: static;
+        transform: none;
+    }
+
+    .bio-section {
+        text-align: center;
+    }
+}
+
+.home-container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 3rem;
+}
+
+.name {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.profile-image {
+    height: 25rem;
+    width: auto;
+    border-radius: 10%;
+}
+
+.bio-section {
+    margin-bottom: 1rem;
+}
+
+.bio-section h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.bio-section p:first-of-type {
+    margin-top: 2rem;
+}
+
+.bio-section p {
+    text-align: justify;
+}
+
+.school-link,
+.company-link,
+.lab-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.school-link:hover,
+.company-link:hover,
+.lab-link:hover {
+    text-decoration: none;
+}
+
+.custom-btn {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.toggle-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.accordion {
+    background-color: var(--bg-color);
+}
+
+.accordion-item {
+    background-color: var(--bg-color);
+    border: 0.1rem solid var(--border-color);
+}
+
+.accordion-button {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.accordion-body {
+    background-color: var(--bg-color-bg);
+    color: var(--text-color);
+    border-top: 0.1rem solid var(--border-color);
+}
+
+.accordion-button.collapsed {
+    color: var(--text-color);
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%239b4dca' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* card-styles */
+.card-section {
+    background-color: var(--bg-color);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.card-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-left: 0.3rem solid var(--text-color);
+    background-color: var(--card-bg);
+    border-radius: 0.3rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.7);
+}
+
+.card-title {
+    color: var(--text-color);
+    margin-bottom: 0.2rem;
+    font-size: 1.2em;
+}
+
+.card-subtitle {
+    color: #444444;
+    margin-bottom: 0.5rem;
+    font-size: 1.1em;
+}
+
+.card-description {
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.card-subsection-title {
+    color: var(--text-color);
+    margin-top: 0rem;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.card-list {
+    margin-left: 20px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.card-list li {
+    font-size: 1rem;
+}
+
+.card-list a:hover {
+    text-decoration: underline;
+}
+
+.contact-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.contact-info {
+    max-width: 20rem;
+    margin: auto;
+    padding: rem;
+}
+
+.contact-card-item {
+    padding: 1.5rem;
+    border-left: 0.3rem solid var(--accent-color);
+    background-color: var(--card-bg);
+    border-radius: 0.3rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.7);
+}
+
+.contact-row {
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.contact-row strong {
+    width: 10rem;
+    text-align: right;
+    color: var(--text-color);
+}
+
+.contact-row a {
+    text-align: left;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+
+.contact-row a:hover {
+    text-decoration: underline;
+}
+
+.myCarousel {
+    max-width: 65rem;
+    margin: 0 auto;
+}
+
+.myCarousel .carousel-inner,
+.myCarousel .carousel-item {
+    width: 100%;
+}
+
+.myCarousel .carousel-item img {
+    width: 100%;
+    height: 30rem;
+    object-fit: contain;
+}
+
+.slide-caption {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.myCarousel .static-indicators {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem auto 0;
+    padding: 0;
+    list-style: none;
+}
+
+.myCarousel .carousel-indicators:not(.static-indicators) {
+    display: none;
+}
+
+.my-asml-card {
+    max-width: 20rem;
+}
+
+.asml-poster {
+    max-width: 40rem;
+}
