@@ -16,10 +16,10 @@ const Publications = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Rakka, M., et al. (2025). SoftmAP:
-                            Software-Hardware Co-design for Integer-Only
-                            Softmax on Associative Processors. Design,
-                            Automation & Test in Europe (DATE).
+                            Rakka, M., et al. (2025). SoftmAP: Software-Hardware
+                            Co-design for Integer-Only Softmax on Associative
+                            Processors. Design, Automation & Test in Europe
+                            (DATE).
                         </a>
                     </li>
                     <li>
@@ -83,7 +83,7 @@ const Publications = () => {
                             Amer, W., Rakka, M., et al. (2024). FPonAP:
                             Implementation of Floating Point Operations on
                             Associative Processors. IEEE Embedded Systems
-                            Letters (accepted).
+                            Letters.
                         </a>
                     </li>
                     <li>
@@ -120,12 +120,12 @@ const Publications = () => {
                             Sperling, N., Bendrick, A., Stohrmann, D., Ernst,
                             R., Donyanavard, B., Maurer, F., Lenke, O.,
                             Surhonne, A., Herkersdorf, A., Amer, W., Melo, C.,
-                            Chen, P., Hoang, Q., Karami, R., Maity, B., Nikolian,
-                            P., Rakka, M., Seo, D., Yi, S., Seo, M., Dutt, N.,
-                            Kurdahi, F. (2023). Information Processing Factory
-                            2.0 - Self-Awareness for Autonomous Collaborative
-                            Systems. Design, Automation & Test in Europe
-                            (DATE).
+                            Chen, P., Hoang, Q., Karami, R., Maity, B.,
+                            Nikolian, P., Rakka, M., Seo, D., Yi, S., Seo, M.,
+                            Dutt, N., Kurdahi, F. (2023). Information Processing
+                            Factory 2.0 - Self-Awareness for Autonomous
+                            Collaborative Systems. Design, Automation & Test in
+                            Europe (DATE).
                         </a>
                     </li>
                     <li>
@@ -147,8 +147,8 @@ const Publications = () => {
                         >
                             Rakka, M., et al. (2021). Importance Splitting
                             Sample Point Reuse for Efficient Memory Yield
-                            Estimation. IEEE International Symposium on
-                            Circuits and Systems (ISCAS).
+                            Estimation. IEEE International Symposium on Circuits
+                            and Systems (ISCAS).
                         </a>
                     </li>
                     <li>
