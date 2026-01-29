@@ -18,11 +18,6 @@ const About = () => {
                             </a>
                         </div>
                         <div className="contact-row">
-                            <strong>Phone:</strong>
-                            <br />
-                            <a href="tel:+19498441214">+1-949-844-1214</a>
-                        </div>
-                        <div className="contact-row">
                             <strong>Location:</strong>
                             <br />
                             Austin, TX, USA
