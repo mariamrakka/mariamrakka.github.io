@@ -40,9 +40,7 @@ const Vitae = () => {
                         title="Master of Science, Electrical and Computer Engineering"
                         subtitle="University of California, Irvine | 09/2020 - 06/2022"
                         description="Thesis: Resistive Content Addressable Memory Design for Decision Tree Acceleration."
-                        list={[
-                            "GPA: 4.00/4.00",
-                        ]}
+                        list={["GPA: 4.00/4.00"]}
                     />
                     <CardItem
                         title="Bachelor of Engineering, Computer and Communications Engineering"
@@ -63,7 +61,7 @@ const Vitae = () => {
                 <div className="card-section">
                     <CardItem
                         title="Arm, Inc."
-                        subtitle="Graduate Research Engineer (Grade 4)"
+                        subtitle="Senior Research Engineer"
                         description="06/2025 - Present | Austin, TX"
                         list={[
                             "Model multi-chiplet heterogeneous systems in gem5 to evaluate scalability across diverse workloads",
@@ -266,14 +264,17 @@ const Vitae = () => {
                 <div className="card-section">
                     <CardItem
                         title="Peer Reviewer"
-                        subtitle="Journals and Conferences | 2020 - 2025"
+                        subtitle="Journals and Conferences | 2020 - 2026"
                         list={[
-                            "IEEE Circuits and Systems Magazine (Paper ID: CASM-00026-2025)",
-                            "22nd International Conference on Hardware/Software Codesign and System Synthesis (Paper #158)",
-                            "IEEE 66th International Midwest Symposium on Circuits and Systems (Paper #168 and #198)",
-                            "IEEE Transactions on Circuits and Systems I: Regular Papers (Paper ID: TCAS-I-02215-2023)",
-                            "ACM Transactions on Architecture and Code Optimization (Manuscript ID: TACO-2024-117)",
-                            "IEEE Transactions on Computers (Review Form ID: TC-2023-12-0735)",
+                            "IEEE Circuits and Systems Magazine (2025)",
+                            "International Conference on Hardware/Software Codesign and System Synthesis (2024)",
+                            "IEEE International Midwest Symposium on Circuits and Systems (2023)",
+                            "IEEE Transactions on Circuits and Systems I: Regular Papers (2023)",
+                            "ACM Transactions on Architecture and Code Optimization (2024)",
+                            "IEEE Transactions on Computers (2023)",
+                            "IEEE Transactions on Circuits and Systems for Artificial Intelligence (2025)",
+                            "Design, Automation & Test in Europe (DATE 2026)",
+                            "Design Automation Conference (DAC 2026)",
                         ]}
                     />
                     <CardItem
