@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Components/Header";
-import Resume from "../Files/MariamRakkaResume.pdf";
+const resumeUrl = `${process.env.PUBLIC_URL}/MariamRakkaResume.pdf`;
 
 const About = () => {
     return (
@@ -26,7 +26,7 @@ const About = () => {
                             <strong>Resume (PDF):</strong>
                             <br />
                             <a
-                                href={Resume}
+                                href={resumeUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
