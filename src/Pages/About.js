@@ -11,12 +11,24 @@ const About = () => {
                 <div className="contact-info card-section">
                     <div className="contact-card-item">
                         <div className="contact-row">
-                            <strong>UCI Email:</strong>
+                            <strong>Email:</strong>
                             <br />
-                            <a href="mailto:mrakka@uci.edu">mrakka@uci.edu</a>
+                            <a href="mailto:rakka.mariam@icloud.com">
+                                rakka.mariam@icloud.com
+                            </a>
                         </div>
                         <div className="contact-row">
-                            <strong>Resume:</strong>
+                            <strong>Phone:</strong>
+                            <br />
+                            <a href="tel:+19498441214">+1-949-844-1214</a>
+                        </div>
+                        <div className="contact-row">
+                            <strong>Location:</strong>
+                            <br />
+                            Austin, TX, USA
+                        </div>
+                        <div className="contact-row">
+                            <strong>Resume (PDF):</strong>
                             <br />
                             <a
                                 href={Resume}

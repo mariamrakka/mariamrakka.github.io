@@ -18,46 +18,37 @@ const Home = () => {
                     Bio
                 </h2>
                 <p>
-                    I am an enthusiastic learner currently pursuing a PhD in
-                    Electrical and Computer Engineering at the University of
-                    California, Irvine. Having completed my MS in the same field
-                    in 2022 with a 4.0/4.0 GPA, my thesis focused on
-                    accelerating decision tree inference on in-memory computing
-                    architectures. I attained my BE in Computer and
-                    Communications Engineering from the American University of
-                    Beirut with high distinction in May 2020, along with minors
-                    in Mathematics and Business Administration.
+                    I am a computer architecture researcher focused on systems
+                    for machine learning and in-memory computing. I earned my
+                    PhD in Electrical and Computer Engineering from the
+                    University of California, Irvine in June 2025, and my MS in
+                    the same field in 2022. My dissertation, "In-Memory
+                    Computing to Accelerate Machine Learning," and my master's
+                    thesis on resistive CAMs for decision trees reflect my
+                    focus on ML acceleration.
                 </p>
                 <p>
-                    Over three consecutive summers at Arm, Inc., I contributed
-                    to advancing Arm-based architectures through cutting-edge
-                    research and development. My work included characterizing
-                    Machine Learning and data analytics workloads to identify
-                    bottlenecks, designing a specialized hardware accelerator
-                    that leveraged SIMD extensions for performance gains, and
-                    conducting software-hardware co-design, which resulted in
-                    several pending patents. I also developed a Machine
-                    Learning-based framework for optimizing Arm processor
-                    configurations and investigated acceleration opportunities
-                    through novel architecture extensions, reinforcing my
-                    expertise in bridging software and hardware innovation.
+                    I currently work at Arm in Austin, TX as a Graduate
+                    Research Engineer, where I model multi-chiplet
+                    heterogeneous systems in gem5, execute workload-driven
+                    performance calibration studies, and perform kernel-level
+                    analysis in C/C++/Python. I build automated pipelines for
+                    reproducible experiments and share findings with
+                    architecture and research teams to inform design
+                    decisions.
                 </p>
                 <p>
-                    Beyond my technical acumen, I am passionate about connecting
-                    dots and collaborating with people in interdisciplinary
-                    fields. My love for constant learning fuels my drive to stay
-                    at the forefront of technological advancements. Currently, I
-                    remain actively engaged in diverse research and
-                    hardware/software projects within Prof. Fadi J. Kurdahi's
-                    group at UCI, where my areas of interest encompass machine
-                    learning acceleration, electronics, and software/hardware
-                    codesign.
+                    Across three prior Arm internships, I characterized machine
+                    learning and data analytics workloads, identified
+                    microarchitectural bottlenecks, and co-designed a
+                    SIMD-capable accelerator concept, contributing to two
+                    patent filings. My publications span TPAMI, JETC, TETC, and
+                    DATE.
                 </p>
                 <p>
-                    Committed to making a meaningful contribution to the field
-                    and society at large, I firmly believe that fostering
-                    societal progress is just as vital as achieving personal
-                    milestones.
+                    I enjoy cross-disciplinary collaboration and mentorship,
+                    and I am motivated by research that advances efficient
+                    compute for real-world ML systems.
                 </p>
                 <p>Fun fact: I have a special affinity for transistors.</p>
             </div>
@@ -65,8 +56,8 @@ const Home = () => {
                 <div className="col-12 bio-section text-center">
                     <h2>Research Interests</h2>
                     <p className="text-center">
-                        Systems for Machine Learning (ML), Electronics,
-                        Software/Hardware Co-design
+                        Systems for ML, In-memory computing, Architecture for
+                        ML workloads, Software/Hardware co-design
                     </p>
                 </div>
             </div>
