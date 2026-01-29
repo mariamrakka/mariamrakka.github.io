@@ -23,11 +23,11 @@
     },
     "scripts": {
         "start": "react-scripts start",
-        "build": "react-scripts build",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "sitemap": "node SitemapGenerator.js",
-        "predeploy": "npm run build && npm run sitemap",
+        "predeploy": "NODE_OPTIONS=--openssl-legacy-provider npm run build && npm run sitemap",
         "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
