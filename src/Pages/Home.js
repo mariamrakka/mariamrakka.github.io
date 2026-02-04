@@ -3,6 +3,26 @@ import Header from "../Components/Header";
 import Photo from "../Images/Profile Pic.JPG";
 
 const Home = () => {
+    const [flippedCards, setFlippedCards] = React.useState([
+        false,
+        false,
+        false,
+        false,
+    ]);
+
+    const toggleCard = (index) => {
+        setFlippedCards((prev) =>
+            prev.map((isFlipped, i) => (i === index ? !isFlipped : isFlipped))
+        );
+    };
+
+    const handleCardKeyDown = (event, index) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleCard(index);
+        }
+    };
+
     return (
         <div className="container home-container">
             <Header />
@@ -115,62 +135,177 @@ const Home = () => {
                 </div>
                 <h2 className="focus-title">Focus Areas</h2>
                 <div className="focus-grid">
-                    <div className="focus-card">
-                        <svg
-                            className="focus-icon"
-                            viewBox="0 0 64 64"
-                            role="img"
-                            aria-hidden="true"
-                        >
-                            <rect x="8" y="14" width="48" height="36" rx="6" />
-                            <path d="M18 30h28M18 38h18" />
-                            <circle cx="46" cy="38" r="4" />
-                        </svg>
-                        <div className="focus-card-title">Systems for ML</div>
-                    </div>
-                    <div className="focus-card">
-                        <svg
-                            className="focus-icon"
-                            viewBox="0 0 64 64"
-                            role="img"
-                            aria-hidden="true"
-                        >
-                            <rect x="10" y="10" width="44" height="44" rx="8" />
-                            <rect x="20" y="20" width="24" height="24" rx="4" />
-                            <path d="M10 24H4M10 40H4M60 24H54M60 40H54M24 10V4M40 10V4M24 60V54M40 60V54" />
-                        </svg>
-                        <div className="focus-card-title">
-                            In-Memory Computing
+                    <div
+                        className={`focus-card ${
+                            flippedCards[0] ? "is-flipped" : ""
+                        }`}
+                        role="button"
+                        tabIndex={0}
+                        aria-pressed={flippedCards[0]}
+                        aria-label="Systems for ML details"
+                        onClick={() => toggleCard(0)}
+                        onKeyDown={(event) => handleCardKeyDown(event, 0)}
+                    >
+                        <div className="focus-card-inner">
+                            <div className="focus-card-face focus-card-front">
+                                <svg
+                                    className="focus-icon"
+                                    viewBox="0 0 64 64"
+                                    role="img"
+                                    aria-hidden="true"
+                                >
+                                    <rect
+                                        x="8"
+                                        y="14"
+                                        width="48"
+                                        height="36"
+                                        rx="6"
+                                    />
+                                    <path d="M18 30h28M18 38h18" />
+                                    <circle cx="46" cy="38" r="4" />
+                                </svg>
+                                <div className="focus-card-title">
+                                    Systems for ML
+                                </div>
+                            </div>
+                            <div className="focus-card-face focus-card-back">
+                                Design end-to-end systems that co-optimize
+                                hardware, software, and runtime for ML
+                                workloads. Emphasis on memory hierarchy, data
+                                movement, and kernel-level behavior to maximize
+                                efficiency.
+                            </div>
                         </div>
                     </div>
-                    <div className="focus-card">
-                        <svg
-                            className="focus-icon"
-                            viewBox="0 0 64 64"
-                            role="img"
-                            aria-hidden="true"
-                        >
-                            <path d="M12 20h20v24H12zM32 26h20v18H32z" />
-                            <path d="M32 32h8M24 32h8M24 38h16" />
-                            <circle cx="16" cy="16" r="4" />
-                            <circle cx="48" cy="16" r="4" />
-                        </svg>
-                        <div className="focus-card-title">HW/SW Co-design</div>
+                    <div
+                        className={`focus-card ${
+                            flippedCards[1] ? "is-flipped" : ""
+                        }`}
+                        role="button"
+                        tabIndex={0}
+                        aria-pressed={flippedCards[1]}
+                        aria-label="In-memory computing details"
+                        onClick={() => toggleCard(1)}
+                        onKeyDown={(event) => handleCardKeyDown(event, 1)}
+                    >
+                        <div className="focus-card-inner">
+                            <div className="focus-card-face focus-card-front">
+                                <svg
+                                    className="focus-icon"
+                                    viewBox="0 0 64 64"
+                                    role="img"
+                                    aria-hidden="true"
+                                >
+                                    <rect
+                                        x="10"
+                                        y="10"
+                                        width="44"
+                                        height="44"
+                                        rx="8"
+                                    />
+                                    <rect
+                                        x="20"
+                                        y="20"
+                                        width="24"
+                                        height="24"
+                                        rx="4"
+                                    />
+                                    <path d="M10 24H4M10 40H4M60 24H54M60 40H54M24 10V4M40 10V4M24 60V54M40 60V54" />
+                                </svg>
+                                <div className="focus-card-title">
+                                    In-Memory Computing
+                                </div>
+                            </div>
+                            <div className="focus-card-face focus-card-back">
+                                Develop and evaluate processing-in-memory
+                                architectures to reduce data movement and
+                                improve energy efficiency. Model accuracy,
+                                latency, and energy tradeoffs under circuit and
+                                device constraints.
+                            </div>
+                        </div>
                     </div>
-                    <div className="focus-card">
-                        <svg
-                            className="focus-icon"
-                            viewBox="0 0 64 64"
-                            role="img"
-                            aria-hidden="true"
-                        >
-                            <rect x="6" y="16" width="22" height="26" rx="4" />
-                            <rect x="36" y="16" width="22" height="26" rx="4" />
-                            <path d="M28 29h8" />
-                            <path d="M12 46h40" />
-                        </svg>
-                        <div className="focus-card-title">
-                            Scaling Multi-Chiplet Systems
+                    <div
+                        className={`focus-card ${
+                            flippedCards[2] ? "is-flipped" : ""
+                        }`}
+                        role="button"
+                        tabIndex={0}
+                        aria-pressed={flippedCards[2]}
+                        aria-label="Hardware and software co-design details"
+                        onClick={() => toggleCard(2)}
+                        onKeyDown={(event) => handleCardKeyDown(event, 2)}
+                    >
+                        <div className="focus-card-inner">
+                            <div className="focus-card-face focus-card-front">
+                                <svg
+                                    className="focus-icon"
+                                    viewBox="0 0 64 64"
+                                    role="img"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M12 20h20v24H12zM32 26h20v18H32z" />
+                                    <path d="M32 32h8M24 32h8M24 38h16" />
+                                    <circle cx="16" cy="16" r="4" />
+                                    <circle cx="48" cy="16" r="4" />
+                                </svg>
+                                <div className="focus-card-title">
+                                    HW/SW Co-design
+                                </div>
+                            </div>
+                            <div className="focus-card-face focus-card-back">
+                                Co-design architectural parameters and kernel
+                                knobs to accelerate critical kernels. Use
+                                profiling to guide choices.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className={`focus-card ${
+                            flippedCards[3] ? "is-flipped" : ""
+                        }`}
+                        role="button"
+                        tabIndex={0}
+                        aria-pressed={flippedCards[3]}
+                        aria-label="Scaling multi-chiplet systems details"
+                        onClick={() => toggleCard(3)}
+                        onKeyDown={(event) => handleCardKeyDown(event, 3)}
+                    >
+                        <div className="focus-card-inner">
+                            <div className="focus-card-face focus-card-front">
+                                <svg
+                                    className="focus-icon"
+                                    viewBox="0 0 64 64"
+                                    role="img"
+                                    aria-hidden="true"
+                                >
+                                    <rect
+                                        x="6"
+                                        y="16"
+                                        width="22"
+                                        height="26"
+                                        rx="4"
+                                    />
+                                    <rect
+                                        x="36"
+                                        y="16"
+                                        width="22"
+                                        height="26"
+                                        rx="4"
+                                    />
+                                    <path d="M28 29h8" />
+                                    <path d="M12 46h40" />
+                                </svg>
+                                <div className="focus-card-title">
+                                    Scaling Multi-Chiplet Systems
+                                </div>
+                            </div>
+                            <div className="focus-card-face focus-card-back">
+                                Calibrate multi-chiplet systems using
+                                simulators and microkernels to quantify
+                                scalability, identify bottlenecks, and propose
+                                architectural improvements.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,8 +325,8 @@ const Home = () => {
                     focus on ML acceleration.
                 </p>
                 <p>
-                    I currently work at Arm in Austin, TX as a Graduate
-                    Research Engineer, where I model multi-chiplet
+                    I currently work at Arm in Austin, TX as a Senior Research
+                    Engineer, where I model multi-chiplet
                     heterogeneous systems in gem5, execute workload-driven
                     performance calibration studies, and perform kernel-level
                     analysis in C/C++/Python. I build automated pipelines for
@@ -213,15 +348,6 @@ const Home = () => {
                     compute for real-world ML systems.
                 </p>
                 <p>Fun fact: I have a special affinity for transistors.</p>
-            </div>
-            <div className="row">
-                <div className="col-12 bio-section text-center">
-                    <h2>Research Interests</h2>
-                    <p className="text-center">
-                        Systems for ML, In-memory computing, Architecture for
-                        ML workloads, Software/Hardware co-design
-                    </p>
-                </div>
             </div>
         </div>
     );
