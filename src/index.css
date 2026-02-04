@@ -354,7 +354,7 @@ li {
 }
 
 .bio-section p {
-    text-align: justify;
+    text-align: left;
 }
 
 .school-link,
@@ -648,6 +648,79 @@ li {
     border-radius: 0.8rem;
     box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.08);
     padding: 1.4rem 1.6rem;
+    display: grid;
+    gap: 1.6rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 0.9rem;
+    text-align: left;
+}
+
+.contact-field {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.contact-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    border: 0.08rem solid #c8c8c8;
+    border-radius: 0.5rem;
+    padding: 0.7rem 0.85rem;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: var(--text-color);
+    font-family: "Times New Roman", Times, serif;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    outline: none;
+    border-color: #1f1f1f;
+    box-shadow: 0 0 0 0.15rem rgba(31, 31, 31, 0.2);
+}
+
+.contact-textarea {
+    resize: vertical;
+    min-height: 8rem;
+}
+
+.contact-submit {
+    justify-self: start;
+    border: none;
+    border-radius: 999px;
+    padding: 0.7rem 1.8rem;
+    background-color: #111111;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.4rem 0.9rem rgba(0, 0, 0, 0.2);
+}
+
+.contact-divider {
+    height: 0.08rem;
+    width: 100%;
+    background-color: #d0d0d0;
+}
+
+.contact-details {
+    display: grid;
 }
 
 .contact-page .contact-row {
