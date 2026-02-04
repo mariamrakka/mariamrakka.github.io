@@ -1,7 +1,9 @@
 import React from "react";
 import Header from "../Components/Header";
 const resumeUrl = `${process.env.PUBLIC_URL}/MariamRakkaResume.pdf`;
-const formEndpoint = process.env.REACT_APP_CONTACT_FORM_ENDPOINT;
+const formEndpoint =
+    process.env.REACT_APP_CONTACT_FORM_ENDPOINT ||
+    "https://formspree.io/f/mojlggqz";
 
 const About = () => {
     return (
@@ -9,89 +11,8 @@ const About = () => {
             <Header />
             <div className="contact-wrapper">
                 <h1>Contact Me</h1>
-                <p className="intro-text">
-                    Use the form below to send me a message without exposing my
-                    email address.
-                </p>
                 <div className="contact-info card-section">
                     <div className="contact-card-item">
-                        <form
-                            className="contact-form"
-                            action={formEndpoint}
-                            method="POST"
-                        >
-                            <input
-                                type="hidden"
-                                name="_subject"
-                                value="New message from mariamrakka.github.io"
-                            />
-                            <div className="contact-field">
-                                <label
-                                    className="contact-label"
-                                    htmlFor="contact-name"
-                                >
-                                    Name
-                                </label>
-                                <input
-                                    className="contact-input"
-                                    id="contact-name"
-                                    name="name"
-                                    type="text"
-                                    autoComplete="name"
-                                    required
-                                />
-                            </div>
-                            <div className="contact-field">
-                                <label
-                                    className="contact-label"
-                                    htmlFor="contact-email"
-                                >
-                                    Email
-                                </label>
-                                <input
-                                    className="contact-input"
-                                    id="contact-email"
-                                    name="email"
-                                    type="email"
-                                    autoComplete="email"
-                                    required
-                                />
-                            </div>
-                            <div className="contact-field">
-                                <label
-                                    className="contact-label"
-                                    htmlFor="contact-subject"
-                                >
-                                    Subject
-                                </label>
-                                <input
-                                    className="contact-input"
-                                    id="contact-subject"
-                                    name="subject"
-                                    type="text"
-                                    required
-                                />
-                            </div>
-                            <div className="contact-field">
-                                <label
-                                    className="contact-label"
-                                    htmlFor="contact-message"
-                                >
-                                    Message
-                                </label>
-                                <textarea
-                                    className="contact-textarea"
-                                    id="contact-message"
-                                    name="message"
-                                    rows="6"
-                                    required
-                                />
-                            </div>
-                            <button type="submit" className="contact-submit">
-                                Send Message
-                            </button>
-                        </form>
-                        <div className="contact-divider" aria-hidden="true" />
                         <div className="contact-details">
                             <div className="contact-row">
                                 <strong>Location:</strong>
@@ -143,6 +64,105 @@ const About = () => {
                                 </a>
                             </div>
                         </div>
+                        <div className="contact-divider" aria-hidden="true" />
+                        <form
+                            className="contact-form"
+                            action={formEndpoint}
+                            method="POST"
+                        >
+                            <input
+                                type="hidden"
+                                name="_subject"
+                                value="New message from mariamrakka.github.io"
+                            />
+                            <div
+                                className="contact-honeypot"
+                                aria-hidden="true"
+                            >
+                                <label htmlFor="contact-company">
+                                    Company
+                                </label>
+                                <input
+                                    id="contact-company"
+                                    name="_gotcha"
+                                    type="text"
+                                    tabIndex="-1"
+                                    autoComplete="off"
+                                />
+                            </div>
+                            <div className="contact-field">
+                                <label
+                                    className="contact-label"
+                                    htmlFor="contact-name"
+                                >
+                                    Name
+                                </label>
+                                <input
+                                    className="contact-input"
+                                    id="contact-name"
+                                    name="name"
+                                    type="text"
+                                    autoComplete="name"
+                                    minLength={2}
+                                    maxLength={80}
+                                    required
+                                />
+                            </div>
+                            <div className="contact-field">
+                                <label
+                                    className="contact-label"
+                                    htmlFor="contact-email"
+                                >
+                                    Email
+                                </label>
+                                <input
+                                    className="contact-input"
+                                    id="contact-email"
+                                    name="email"
+                                    type="email"
+                                    autoComplete="email"
+                                    maxLength={120}
+                                    required
+                                />
+                            </div>
+                            <div className="contact-field">
+                                <label
+                                    className="contact-label"
+                                    htmlFor="contact-subject"
+                                >
+                                    Subject
+                                </label>
+                                <input
+                                    className="contact-input"
+                                    id="contact-subject"
+                                    name="subject"
+                                    type="text"
+                                    minLength={3}
+                                    maxLength={120}
+                                    required
+                                />
+                            </div>
+                            <div className="contact-field">
+                                <label
+                                    className="contact-label"
+                                    htmlFor="contact-message"
+                                >
+                                    Message
+                                </label>
+                                <textarea
+                                    className="contact-textarea"
+                                    id="contact-message"
+                                    name="message"
+                                    rows="6"
+                                    minLength={10}
+                                    maxLength={2000}
+                                    required
+                                />
+                            </div>
+                            <button type="submit" className="contact-submit">
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -658,6 +658,14 @@ li {
     text-align: left;
 }
 
+.contact-honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .contact-field {
     display: grid;
     gap: 0.35rem;
