@@ -251,7 +251,7 @@ const Home = () => {
                                     <circle cx="48" cy="16" r="4" />
                                 </svg>
                                 <div className="focus-card-title">
-                                    HW/SW Co-design
+                                    HW/SW Co-Design
                                 </div>
                             </div>
                             <div className="focus-card-face focus-card-back">
