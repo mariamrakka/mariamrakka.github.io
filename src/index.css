@@ -120,6 +120,99 @@ li {
     margin-bottom: 1rem;
 }
 
+.home-focus {
+    max-width: 60rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.focus-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
+}
+
+.focus-visual {
+    max-width: 36rem;
+    margin: 0 auto 1.2rem;
+}
+
+.focus-line {
+    width: 100%;
+    height: auto;
+    fill: none;
+    stroke: #222222;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.7;
+    stroke-dasharray: 520;
+    stroke-dashoffset: 520;
+    animation: focus-draw 7s ease-in-out 0.2s 1 forwards;
+}
+
+.focus-line circle {
+    fill: #222222;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.focus-card {
+    background-color: #f7f7f7;
+    border: 0.08rem solid #d0d0d0;
+    border-radius: 0.8rem;
+    padding: 1.2rem 1.4rem;
+    display: grid;
+    justify-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.08);
+}
+
+.focus-icon {
+    width: 3rem;
+    height: 3rem;
+    fill: none;
+    stroke: #111111;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.focus-card-title {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+
+@keyframes focus-draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .focus-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .home-focus {
+        margin-bottom: 2rem;
+    }
+
+    .focus-title {
+        font-size: 1.7rem;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .bio-section h2 {
     font-size: 2rem;
     color: var(--text-color);

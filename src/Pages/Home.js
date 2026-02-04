@@ -13,6 +13,68 @@ const Home = () => {
                     className="profile-image img-fluid"
                 />
             </div>
+            <section className="home-focus">
+                <div className="focus-visual" aria-hidden="true">
+                    <svg
+                        className="focus-line"
+                        viewBox="0 0 600 120"
+                        role="img"
+                        aria-label=""
+                    >
+                        <path d="M20 80 L120 80 L160 40 L230 40 L270 90 L340 90 L380 55 L450 55 L500 85 L580 85" />
+                        <circle cx="120" cy="80" r="6" />
+                        <circle cx="160" cy="40" r="6" />
+                        <circle cx="270" cy="90" r="6" />
+                        <circle cx="380" cy="55" r="6" />
+                        <circle cx="500" cy="85" r="6" />
+                    </svg>
+                </div>
+                <h2 className="focus-title">Focus Areas</h2>
+                <div className="focus-grid">
+                    <div className="focus-card">
+                        <svg
+                            className="focus-icon"
+                            viewBox="0 0 64 64"
+                            role="img"
+                            aria-hidden="true"
+                        >
+                            <rect x="8" y="14" width="48" height="36" rx="6" />
+                            <path d="M18 30h28M18 38h18" />
+                            <circle cx="46" cy="38" r="4" />
+                        </svg>
+                        <div className="focus-card-title">Systems for ML</div>
+                    </div>
+                    <div className="focus-card">
+                        <svg
+                            className="focus-icon"
+                            viewBox="0 0 64 64"
+                            role="img"
+                            aria-hidden="true"
+                        >
+                            <rect x="10" y="10" width="44" height="44" rx="8" />
+                            <rect x="20" y="20" width="24" height="24" rx="4" />
+                            <path d="M10 24H4M10 40H4M60 24H54M60 40H54M24 10V4M40 10V4M24 60V54M40 60V54" />
+                        </svg>
+                        <div className="focus-card-title">
+                            In-Memory Computing
+                        </div>
+                    </div>
+                    <div className="focus-card">
+                        <svg
+                            className="focus-icon"
+                            viewBox="0 0 64 64"
+                            role="img"
+                            aria-hidden="true"
+                        >
+                            <path d="M12 20h20v24H12zM32 26h20v18H32z" />
+                            <path d="M32 32h8M24 32h8M24 38h16" />
+                            <circle cx="16" cy="16" r="4" />
+                            <circle cx="48" cy="16" r="4" />
+                        </svg>
+                        <div className="focus-card-title">HW/SW Co-design</div>
+                    </div>
+                </div>
+            </section>
             <div className="d-flex flex-wrap mx-auto bio-section text-center">
                 <h2 className="justify-content-center align-items-center mx-auto">
                     Bio
