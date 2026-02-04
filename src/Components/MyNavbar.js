@@ -1,10 +1,17 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-const MyNavbar = () => {
+const MyNavbar = ({ theme, onThemeChange }) => {
+    const isDark = theme === "dark";
+
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar
+            collapseOnSelect
+            expand="lg"
+            bg={isDark ? "dark" : "light"}
+            variant={isDark ? "dark" : "light"}
+        >
             <Container>
                 <Navbar.Brand className="d-flex align-items-center">
                     {/* <img
@@ -34,6 +41,23 @@ const MyNavbar = () => {
                             <Nav.Link as={NavLink} to="/about">
                                 About
                             </Nav.Link>
+                            <NavDropdown
+                                title="Theme"
+                                id="theme-dropdown"
+                            >
+                                <NavDropdown.Item
+                                    active={theme === "light"}
+                                    onClick={() => onThemeChange("light")}
+                                >
+                                    Light
+                                </NavDropdown.Item>
+                                <NavDropdown.Item
+                                    active={theme === "dark"}
+                                    onClick={() => onThemeChange("dark")}
+                                >
+                                    Dark
+                                </NavDropdown.Item>
+                            </NavDropdown>
                         </Nav>
                     </div>
                 </Navbar.Collapse>
