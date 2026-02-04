@@ -105,7 +105,15 @@ li {
 .profile-image {
     height: 25rem;
     width: auto;
+    max-width: 100%;
     border-radius: 10%;
+}
+
+@media (max-width: 576px) {
+    .profile-image {
+        height: auto;
+        width: min(80vw, 18rem);
+    }
 }
 
 .bio-section {
