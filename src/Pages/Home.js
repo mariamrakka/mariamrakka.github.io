@@ -12,7 +12,7 @@ const Home = () => {
 
     const toggleCard = (index) => {
         setFlippedCards((prev) =>
-            prev.map((isFlipped, i) => (i === index ? !isFlipped : isFlipped))
+            prev.map((isFlipped, i) => (i === index ? !isFlipped : isFlipped)),
         );
     };
 
@@ -36,7 +36,10 @@ const Home = () => {
             <section className="home-focus">
                 <div className="focus-visual" aria-hidden="true">
                     <svg className="focus-line" viewBox="0 0 600 160">
-                        <g className="chip chip-left" transform="translate(70 20)">
+                        <g
+                            className="chip chip-left"
+                            transform="translate(70 20)"
+                        >
                             <rect
                                 className="chip-body"
                                 x="0"
@@ -61,28 +64,151 @@ const Home = () => {
                             >
                                 AI
                             </text>
-                            <line className="chip-pin" x1="20" y1="-8" x2="20" y2="0" />
-                            <line className="chip-pin" x1="40" y1="-8" x2="40" y2="0" />
-                            <line className="chip-pin" x1="60" y1="-8" x2="60" y2="0" />
-                            <line className="chip-pin" x1="80" y1="-8" x2="80" y2="0" />
-                            <line className="chip-pin" x1="100" y1="-8" x2="100" y2="0" />
-                            <line className="chip-pin" x1="20" y1="120" x2="20" y2="128" />
-                            <line className="chip-pin" x1="40" y1="120" x2="40" y2="128" />
-                            <line className="chip-pin" x1="60" y1="120" x2="60" y2="128" />
-                            <line className="chip-pin" x1="80" y1="120" x2="80" y2="128" />
-                            <line className="chip-pin" x1="100" y1="120" x2="100" y2="128" />
-                            <line className="chip-pin" x1="-8" y1="20" x2="0" y2="20" />
-                            <line className="chip-pin" x1="-8" y1="40" x2="0" y2="40" />
-                            <line className="chip-pin" x1="-8" y1="60" x2="0" y2="60" />
-                            <line className="chip-pin" x1="-8" y1="80" x2="0" y2="80" />
-                            <line className="chip-pin" x1="-8" y1="100" x2="0" y2="100" />
-                            <line className="chip-pin" x1="120" y1="20" x2="128" y2="20" />
-                            <line className="chip-pin" x1="120" y1="40" x2="128" y2="40" />
-                            <line className="chip-pin" x1="120" y1="60" x2="128" y2="60" />
-                            <line className="chip-pin" x1="120" y1="80" x2="128" y2="80" />
-                            <line className="chip-pin" x1="120" y1="100" x2="128" y2="100" />
+                            <line
+                                className="chip-pin"
+                                x1="20"
+                                y1="-8"
+                                x2="20"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="40"
+                                y1="-8"
+                                x2="40"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="60"
+                                y1="-8"
+                                x2="60"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="80"
+                                y1="-8"
+                                x2="80"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="100"
+                                y1="-8"
+                                x2="100"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="20"
+                                y1="120"
+                                x2="20"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="40"
+                                y1="120"
+                                x2="40"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="60"
+                                y1="120"
+                                x2="60"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="80"
+                                y1="120"
+                                x2="80"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="100"
+                                y1="120"
+                                x2="100"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="20"
+                                x2="0"
+                                y2="20"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="40"
+                                x2="0"
+                                y2="40"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="60"
+                                x2="0"
+                                y2="60"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="80"
+                                x2="0"
+                                y2="80"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="100"
+                                x2="0"
+                                y2="100"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="20"
+                                x2="128"
+                                y2="20"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="40"
+                                x2="128"
+                                y2="40"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="60"
+                                x2="128"
+                                y2="60"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="80"
+                                x2="128"
+                                y2="80"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="100"
+                                x2="128"
+                                y2="100"
+                            />
                         </g>
-                        <g className="chip chip-right" transform="translate(410 20)">
+                        <g
+                            className="chip chip-right"
+                            transform="translate(410 20)"
+                        >
                             <rect
                                 className="chip-body"
                                 x="0"
@@ -107,26 +233,146 @@ const Home = () => {
                             >
                                 AI
                             </text>
-                            <line className="chip-pin" x1="20" y1="-8" x2="20" y2="0" />
-                            <line className="chip-pin" x1="40" y1="-8" x2="40" y2="0" />
-                            <line className="chip-pin" x1="60" y1="-8" x2="60" y2="0" />
-                            <line className="chip-pin" x1="80" y1="-8" x2="80" y2="0" />
-                            <line className="chip-pin" x1="100" y1="-8" x2="100" y2="0" />
-                            <line className="chip-pin" x1="20" y1="120" x2="20" y2="128" />
-                            <line className="chip-pin" x1="40" y1="120" x2="40" y2="128" />
-                            <line className="chip-pin" x1="60" y1="120" x2="60" y2="128" />
-                            <line className="chip-pin" x1="80" y1="120" x2="80" y2="128" />
-                            <line className="chip-pin" x1="100" y1="120" x2="100" y2="128" />
-                            <line className="chip-pin" x1="-8" y1="20" x2="0" y2="20" />
-                            <line className="chip-pin" x1="-8" y1="40" x2="0" y2="40" />
-                            <line className="chip-pin" x1="-8" y1="60" x2="0" y2="60" />
-                            <line className="chip-pin" x1="-8" y1="80" x2="0" y2="80" />
-                            <line className="chip-pin" x1="-8" y1="100" x2="0" y2="100" />
-                            <line className="chip-pin" x1="120" y1="20" x2="128" y2="20" />
-                            <line className="chip-pin" x1="120" y1="40" x2="128" y2="40" />
-                            <line className="chip-pin" x1="120" y1="60" x2="128" y2="60" />
-                            <line className="chip-pin" x1="120" y1="80" x2="128" y2="80" />
-                            <line className="chip-pin" x1="120" y1="100" x2="128" y2="100" />
+                            <line
+                                className="chip-pin"
+                                x1="20"
+                                y1="-8"
+                                x2="20"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="40"
+                                y1="-8"
+                                x2="40"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="60"
+                                y1="-8"
+                                x2="60"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="80"
+                                y1="-8"
+                                x2="80"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="100"
+                                y1="-8"
+                                x2="100"
+                                y2="0"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="20"
+                                y1="120"
+                                x2="20"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="40"
+                                y1="120"
+                                x2="40"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="60"
+                                y1="120"
+                                x2="60"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="80"
+                                y1="120"
+                                x2="80"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="100"
+                                y1="120"
+                                x2="100"
+                                y2="128"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="20"
+                                x2="0"
+                                y2="20"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="40"
+                                x2="0"
+                                y2="40"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="60"
+                                x2="0"
+                                y2="60"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="80"
+                                x2="0"
+                                y2="80"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="-8"
+                                y1="100"
+                                x2="0"
+                                y2="100"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="20"
+                                x2="128"
+                                y2="20"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="40"
+                                x2="128"
+                                y2="40"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="60"
+                                x2="128"
+                                y2="60"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="80"
+                                x2="128"
+                                y2="80"
+                            />
+                            <line
+                                className="chip-pin"
+                                x1="120"
+                                y1="100"
+                                x2="128"
+                                y2="100"
+                            />
                         </g>
                         <path className="chip-link" d="M190 80 H410" />
                         <circle className="chip-node" cx="190" cy="80" r="4" />
@@ -218,11 +464,10 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="focus-card-face focus-card-back">
-                                Develop and evaluate processing-in-memory
-                                architectures to reduce data movement and
-                                improve energy efficiency. Model accuracy,
-                                latency, and energy tradeoffs under circuit and
-                                device constraints.
+                                Evaluate processing-in-memory architectures to
+                                reduce data movement and improve energy
+                                efficiency. Model latency and energy tradeoffs
+                                under circuit and system constraints.
                             </div>
                         </div>
                     </div>
@@ -302,10 +547,10 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="focus-card-face focus-card-back">
-                                Calibrate multi-chiplet systems using
-                                simulators and microkernels to quantify
-                                scalability, identify bottlenecks, and propose
-                                architectural improvements.
+                                Calibrate multi-chiplet systems using simulators
+                                and microkernels to quantify scalability,
+                                identify bottlenecks, and propose architectural
+                                improvements.
                             </div>
                         </div>
                     </div>
@@ -322,31 +567,29 @@ const Home = () => {
                     University of California, Irvine in June 2025, and my MS in
                     the same field in 2022. My dissertation, "In-Memory
                     Computing to Accelerate Machine Learning," and my master's
-                    thesis on resistive CAMs for decision trees reflect my
-                    focus on ML acceleration.
+                    thesis on resistive CAMs for decision trees reflect my focus
+                    on ML acceleration.
                 </p>
                 <p>
                     I currently work at Arm in Austin, TX as a Senior Research
-                    Engineer, where I model multi-chiplet
-                    heterogeneous systems in gem5, execute workload-driven
-                    performance calibration studies, and perform kernel-level
-                    analysis in C/C++/Python. I build automated pipelines for
-                    reproducible experiments and share findings with
-                    architecture and research teams to inform design
-                    decisions.
+                    Engineer, where I model multi-chiplet heterogeneous systems
+                    in gem5, execute workload-driven performance calibration
+                    studies, and perform kernel-level analysis in C/C++/Python.
+                    I build automated pipelines for reproducible experiments and
+                    share findings with architecture and research teams to
+                    inform design decisions.
                 </p>
                 <p>
                     Across three prior Arm internships, I characterized machine
                     learning and data analytics workloads, identified
                     microarchitectural bottlenecks, and co-designed a
-                    SIMD-capable accelerator concept, contributing to two
-                    patent filings. My publications span TPAMI, JETC, TETC, and
-                    DATE.
+                    SIMD-capable accelerator concept, contributing to two patent
+                    filings. My publications span TPAMI, JETC, TETC, and DATE.
                 </p>
                 <p>
-                    I enjoy cross-disciplinary collaboration and mentorship,
-                    and I am motivated by research that advances efficient
-                    compute for real-world ML systems.
+                    I enjoy cross-disciplinary collaboration and mentorship, and
+                    I am motivated by research that advances efficient compute
+                    for real-world ML systems.
                 </p>
                 <p>Fun fact: I have a special affinity for transistors.</p>
             </div>
