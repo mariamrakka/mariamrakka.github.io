@@ -140,24 +140,71 @@ li {
 .focus-line {
     width: 100%;
     height: auto;
-    fill: none;
-    stroke: #222222;
-    stroke-width: 2.2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    opacity: 0.7;
-    stroke-dasharray: 520;
-    stroke-dashoffset: 520;
-    animation: focus-draw 7s ease-in-out 0.2s 1 forwards;
 }
 
-.focus-line circle {
+.focus-line .chip-body {
+    fill: #f2f2f2;
+    stroke: #1f1f1f;
+    stroke-width: 2.2;
+}
+
+.focus-line .chip-core {
+    fill: #d9d9d9;
+    stroke: #1f1f1f;
+    stroke-width: 2;
+}
+
+.focus-line .chip-text {
+    font-size: 20px;
+    font-weight: 600;
+    fill: #333333;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.focus-line .chip-trace {
+    fill: none;
+    stroke: #1f1f1f;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.focus-line .chip-pin {
+    stroke: #1f1f1f;
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+.focus-line .chip-link {
+    fill: none;
+    stroke: #222222;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    opacity: 0.7;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: focus-draw 2.4s ease-in-out 0.6s 1 forwards;
+}
+
+.focus-line .chip-node {
     fill: #222222;
+}
+
+.focus-line .chip {
+    opacity: 0;
+    transform: translateY(6px);
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: chip-in 0.6s ease-out 0.2s forwards;
+}
+
+.focus-line .chip-right {
+    animation-delay: 0.35s;
 }
 
 .focus-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 
@@ -170,6 +217,7 @@ li {
     justify-items: center;
     gap: 0.75rem;
     box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.08);
+    min-width: 0;
 }
 
 .focus-icon {
@@ -185,6 +233,8 @@ li {
 .focus-card-title {
     font-size: 1rem;
     letter-spacing: 0.02em;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
 }
 
 @keyframes focus-draw {
@@ -193,9 +243,10 @@ li {
     }
 }
 
-@media (max-width: 992px) {
-    .focus-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+@keyframes chip-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -209,7 +260,23 @@ li {
     }
 
     .focus-grid {
-        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .focus-card {
+        padding: 0.6rem 0.4rem;
+        border-radius: 0.6rem;
+    }
+
+    .focus-icon {
+        width: 2rem;
+        height: 2rem;
+        stroke-width: 2;
+    }
+
+    .focus-card-title {
+        font-size: 0.7rem;
+        letter-spacing: 0.01em;
     }
 }
 

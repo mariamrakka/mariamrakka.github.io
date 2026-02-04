@@ -15,18 +15,110 @@ const Home = () => {
             </div>
             <section className="home-focus">
                 <div className="focus-visual" aria-hidden="true">
-                    <svg
-                        className="focus-line"
-                        viewBox="0 0 600 120"
-                        role="img"
-                        aria-label=""
-                    >
-                        <path d="M20 80 L120 80 L160 40 L230 40 L270 90 L340 90 L380 55 L450 55 L500 85 L580 85" />
-                        <circle cx="120" cy="80" r="6" />
-                        <circle cx="160" cy="40" r="6" />
-                        <circle cx="270" cy="90" r="6" />
-                        <circle cx="380" cy="55" r="6" />
-                        <circle cx="500" cy="85" r="6" />
+                    <svg className="focus-line" viewBox="0 0 600 160">
+                        <g className="chip chip-left" transform="translate(70 20)">
+                            <rect
+                                className="chip-body"
+                                x="0"
+                                y="0"
+                                width="120"
+                                height="120"
+                                rx="12"
+                            />
+                            <rect
+                                className="chip-core"
+                                x="36"
+                                y="36"
+                                width="48"
+                                height="48"
+                                rx="6"
+                            />
+                            <text
+                                className="chip-text"
+                                x="60"
+                                y="68"
+                                textAnchor="middle"
+                            >
+                                AI
+                            </text>
+                            <path
+                                className="chip-trace"
+                                d="M12 24 H44 M44 24 V46 M76 24 H108 M76 24 V38 M20 86 H48 M48 86 V64 M72 94 H100 M72 94 V70"
+                            />
+                            <line className="chip-pin" x1="20" y1="-8" x2="20" y2="0" />
+                            <line className="chip-pin" x1="40" y1="-8" x2="40" y2="0" />
+                            <line className="chip-pin" x1="60" y1="-8" x2="60" y2="0" />
+                            <line className="chip-pin" x1="80" y1="-8" x2="80" y2="0" />
+                            <line className="chip-pin" x1="100" y1="-8" x2="100" y2="0" />
+                            <line className="chip-pin" x1="20" y1="120" x2="20" y2="128" />
+                            <line className="chip-pin" x1="40" y1="120" x2="40" y2="128" />
+                            <line className="chip-pin" x1="60" y1="120" x2="60" y2="128" />
+                            <line className="chip-pin" x1="80" y1="120" x2="80" y2="128" />
+                            <line className="chip-pin" x1="100" y1="120" x2="100" y2="128" />
+                            <line className="chip-pin" x1="-8" y1="20" x2="0" y2="20" />
+                            <line className="chip-pin" x1="-8" y1="40" x2="0" y2="40" />
+                            <line className="chip-pin" x1="-8" y1="60" x2="0" y2="60" />
+                            <line className="chip-pin" x1="-8" y1="80" x2="0" y2="80" />
+                            <line className="chip-pin" x1="-8" y1="100" x2="0" y2="100" />
+                            <line className="chip-pin" x1="120" y1="20" x2="128" y2="20" />
+                            <line className="chip-pin" x1="120" y1="40" x2="128" y2="40" />
+                            <line className="chip-pin" x1="120" y1="60" x2="128" y2="60" />
+                            <line className="chip-pin" x1="120" y1="80" x2="128" y2="80" />
+                            <line className="chip-pin" x1="120" y1="100" x2="128" y2="100" />
+                        </g>
+                        <g className="chip chip-right" transform="translate(410 20)">
+                            <rect
+                                className="chip-body"
+                                x="0"
+                                y="0"
+                                width="120"
+                                height="120"
+                                rx="12"
+                            />
+                            <rect
+                                className="chip-core"
+                                x="36"
+                                y="36"
+                                width="48"
+                                height="48"
+                                rx="6"
+                            />
+                            <text
+                                className="chip-text"
+                                x="60"
+                                y="68"
+                                textAnchor="middle"
+                            >
+                                AI
+                            </text>
+                            <path
+                                className="chip-trace"
+                                d="M12 30 H44 M44 30 V50 M76 30 H108 M76 30 V44 M22 84 H50 M50 84 V62 M70 96 H100 M70 96 V70"
+                            />
+                            <line className="chip-pin" x1="20" y1="-8" x2="20" y2="0" />
+                            <line className="chip-pin" x1="40" y1="-8" x2="40" y2="0" />
+                            <line className="chip-pin" x1="60" y1="-8" x2="60" y2="0" />
+                            <line className="chip-pin" x1="80" y1="-8" x2="80" y2="0" />
+                            <line className="chip-pin" x1="100" y1="-8" x2="100" y2="0" />
+                            <line className="chip-pin" x1="20" y1="120" x2="20" y2="128" />
+                            <line className="chip-pin" x1="40" y1="120" x2="40" y2="128" />
+                            <line className="chip-pin" x1="60" y1="120" x2="60" y2="128" />
+                            <line className="chip-pin" x1="80" y1="120" x2="80" y2="128" />
+                            <line className="chip-pin" x1="100" y1="120" x2="100" y2="128" />
+                            <line className="chip-pin" x1="-8" y1="20" x2="0" y2="20" />
+                            <line className="chip-pin" x1="-8" y1="40" x2="0" y2="40" />
+                            <line className="chip-pin" x1="-8" y1="60" x2="0" y2="60" />
+                            <line className="chip-pin" x1="-8" y1="80" x2="0" y2="80" />
+                            <line className="chip-pin" x1="-8" y1="100" x2="0" y2="100" />
+                            <line className="chip-pin" x1="120" y1="20" x2="128" y2="20" />
+                            <line className="chip-pin" x1="120" y1="40" x2="128" y2="40" />
+                            <line className="chip-pin" x1="120" y1="60" x2="128" y2="60" />
+                            <line className="chip-pin" x1="120" y1="80" x2="128" y2="80" />
+                            <line className="chip-pin" x1="120" y1="100" x2="128" y2="100" />
+                        </g>
+                        <path className="chip-link" d="M190 80 H410" />
+                        <circle className="chip-node" cx="190" cy="80" r="4" />
+                        <circle className="chip-node" cx="410" cy="80" r="4" />
                     </svg>
                 </div>
                 <h2 className="focus-title">Focus Areas</h2>
@@ -72,6 +164,22 @@ const Home = () => {
                             <circle cx="48" cy="16" r="4" />
                         </svg>
                         <div className="focus-card-title">HW/SW Co-design</div>
+                    </div>
+                    <div className="focus-card">
+                        <svg
+                            className="focus-icon"
+                            viewBox="0 0 64 64"
+                            role="img"
+                            aria-hidden="true"
+                        >
+                            <rect x="6" y="16" width="22" height="26" rx="4" />
+                            <rect x="36" y="16" width="22" height="26" rx="4" />
+                            <path d="M28 29h8" />
+                            <path d="M12 46h40" />
+                        </svg>
+                        <div className="focus-card-title">
+                            Scaling Multi-Chiplet Systems
+                        </div>
                     </div>
                 </div>
             </section>
