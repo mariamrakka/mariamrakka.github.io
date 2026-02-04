@@ -4,7 +4,7 @@ const resumeUrl = `${process.env.PUBLIC_URL}/MariamRakkaResume.pdf`;
 
 const About = () => {
     return (
-        <div className="container home-container">
+        <div className="container home-container contact-page">
             <Header />
             <div className="contact-wrapper">
                 <h1>Contact Me</h1>
