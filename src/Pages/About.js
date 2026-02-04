@@ -4,8 +4,61 @@ const resumeUrl = `${process.env.PUBLIC_URL}/MariamRakkaResume.pdf`;
 const formEndpoint =
     process.env.REACT_APP_CONTACT_FORM_ENDPOINT ||
     "https://formspree.io/f/mojlggqz";
+const recaptchaSiteKey =
+    process.env.REACT_APP_RECAPTCHA_SITE_KEY ||
+    "6LfmsGAsAAAAAEqPCVV62ex0IQ_4JD26w4DQOOTp";
 
 const About = () => {
+    const recaptchaRef = React.useRef(null);
+    const recaptchaIdRef = React.useRef(null);
+
+    React.useEffect(() => {
+        const renderRecaptcha = () => {
+            if (!recaptchaRef.current || !window.grecaptcha) {
+                return;
+            }
+            if (recaptchaIdRef.current !== null) {
+                return;
+            }
+            recaptchaIdRef.current = window.grecaptcha.render(
+                recaptchaRef.current,
+                {
+                    sitekey: recaptchaSiteKey,
+                },
+            );
+        };
+
+        if (document.getElementById("recaptcha-script")) {
+            if (window.grecaptcha) {
+                renderRecaptcha();
+                return;
+            }
+
+            const existingScript =
+                document.getElementById("recaptcha-script");
+            if (existingScript) {
+                existingScript.addEventListener("load", renderRecaptcha);
+                return () => {
+                    existingScript.removeEventListener("load", renderRecaptcha);
+                };
+            }
+
+            return;
+        }
+
+        const script = document.createElement("script");
+        script.id = "recaptcha-script";
+        script.src = "https://www.google.com/recaptcha/api.js?render=explicit";
+        script.async = true;
+        script.defer = true;
+        script.addEventListener("load", renderRecaptcha);
+        document.body.appendChild(script);
+
+        return () => {
+            script.removeEventListener("load", renderRecaptcha);
+        };
+    }, []);
+
     return (
         <div className="container home-container contact-page">
             <Header />
@@ -157,6 +210,12 @@ const About = () => {
                                     minLength={10}
                                     maxLength={2000}
                                     required
+                                />
+                            </div>
+                            <div className="contact-recaptcha">
+                                <div
+                                    className="g-recaptcha"
+                                    ref={recaptchaRef}
                                 />
                             </div>
                             <button type="submit" className="contact-submit">

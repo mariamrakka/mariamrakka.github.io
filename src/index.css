@@ -308,7 +308,8 @@ li {
     }
 
     .focus-card-inner {
-        min-height: 12rem;
+        min-height: 0;
+        aspect-ratio: 1 / 1;
     }
 
     .focus-card-face {
@@ -327,12 +328,16 @@ li {
         line-height: 1.3;
         letter-spacing: 0;
         text-wrap: balance;
+        overflow-y: auto;
+        align-content: start;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
 @media (max-width: 400px) {
     .focus-card-inner {
-        min-height: 13.5rem;
+        min-height: 0;
+        aspect-ratio: 1 / 1;
     }
 
     .focus-card-face {
@@ -700,6 +705,11 @@ li {
 .contact-textarea {
     resize: vertical;
     min-height: 8rem;
+}
+
+.contact-recaptcha {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .contact-submit {
