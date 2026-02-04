@@ -41,10 +41,6 @@ const Home = () => {
                             >
                                 AI
                             </text>
-                            <path
-                                className="chip-trace"
-                                d="M12 24 H44 M44 24 V46 M76 24 H108 M76 24 V38 M20 86 H48 M48 86 V64 M72 94 H100 M72 94 V70"
-                            />
                             <line className="chip-pin" x1="20" y1="-8" x2="20" y2="0" />
                             <line className="chip-pin" x1="40" y1="-8" x2="40" y2="0" />
                             <line className="chip-pin" x1="60" y1="-8" x2="60" y2="0" />
@@ -91,10 +87,6 @@ const Home = () => {
                             >
                                 AI
                             </text>
-                            <path
-                                className="chip-trace"
-                                d="M12 30 H44 M44 30 V50 M76 30 H108 M76 30 V44 M22 84 H50 M50 84 V62 M70 96 H100 M70 96 V70"
-                            />
                             <line className="chip-pin" x1="20" y1="-8" x2="20" y2="0" />
                             <line className="chip-pin" x1="40" y1="-8" x2="40" y2="0" />
                             <line className="chip-pin" x1="60" y1="-8" x2="60" y2="0" />
