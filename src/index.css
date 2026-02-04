@@ -327,6 +327,15 @@ li {
     text-align: center;
     color: var(--text-color);
     pointer-events: auto;
+    display: block;
+}
+
+.focus-card-scroll {
+    max-height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: auto;
+    padding-right: 0.15rem;
 }
 
 .focus-icon {
@@ -353,6 +362,12 @@ li {
 }
 
 
+@media (max-width: 900px) {
+    .focus-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 @media (max-width: 576px) {
     .home-focus {
         margin-bottom: 2rem;
@@ -363,7 +378,7 @@ li {
     }
 
     .focus-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 0.5rem;
     }
 
@@ -403,10 +418,10 @@ li {
         line-height: 1.3;
         letter-spacing: 0;
         text-wrap: balance;
-        overflow-y: auto;
-        align-content: start;
-        -webkit-overflow-scrolling: touch;
-        pointer-events: auto;
+    }
+
+    .focus-card-scroll {
+        max-height: 100%;
         touch-action: pan-y;
     }
 }

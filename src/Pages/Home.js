@@ -416,11 +416,13 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="focus-card-face focus-card-back">
-                                Design end-to-end systems that co-optimize
-                                hardware, software, and runtime for ML
-                                workloads. Emphasis on memory hierarchy, data
-                                movement, and kernel-level behavior to maximize
-                                efficiency.
+                                <div className="focus-card-scroll">
+                                    Design end-to-end systems that co-optimize
+                                    hardware, software, and runtime for ML
+                                    workloads. Emphasis on memory hierarchy,
+                                    data movement, and kernel-level behavior to
+                                    maximize efficiency.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -464,10 +466,13 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="focus-card-face focus-card-back">
-                                Evaluate processing-in-memory architectures to
-                                reduce data movement and improve energy
-                                efficiency. Model latency and energy tradeoffs
-                                under circuit and system constraints.
+                                <div className="focus-card-scroll">
+                                    Evaluate processing-in-memory architectures
+                                    to reduce data movement and improve energy
+                                    efficiency. Model latency and energy
+                                    tradeoffs under circuit and system
+                                    constraints.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -500,9 +505,11 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="focus-card-face focus-card-back">
-                                Co-design architectural parameters and kernel
-                                knobs to accelerate critical kernels. Use
-                                profiling to guide choices.
+                                <div className="focus-card-scroll">
+                                    Co-design architectural parameters and
+                                    kernel knobs to accelerate critical
+                                    kernels. Use profiling to guide choices.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -547,10 +554,12 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="focus-card-face focus-card-back">
-                                Calibrate multi-chiplet systems using simulators
-                                and microkernels to quantify scalability,
-                                identify bottlenecks, and propose architectural
-                                improvements.
+                                <div className="focus-card-scroll">
+                                    Calibrate multi-chiplet systems using
+                                    simulators and microkernels to quantify
+                                    scalability, identify bottlenecks, and
+                                    propose architectural improvements.
+                                </div>
                             </div>
                         </div>
                     </div>

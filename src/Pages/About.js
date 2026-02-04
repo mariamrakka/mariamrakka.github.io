@@ -7,6 +7,7 @@ const formEndpoint =
 const recaptchaSiteKey =
     process.env.REACT_APP_RECAPTCHA_SITE_KEY ||
     "6LfmsGAsAAAAAEqPCVV62ex0IQ_4JD26w4DQOOTp";
+const recaptchaOnload = "recaptchaOnloadCallback";
 
 const About = () => {
     const recaptchaRef = React.useRef(null);
@@ -17,9 +18,7 @@ const About = () => {
             if (!recaptchaRef.current || !window.grecaptcha) {
                 return;
             }
-            if (recaptchaIdRef.current !== null) {
-                return;
-            }
+            recaptchaRef.current.innerHTML = "";
             recaptchaIdRef.current = window.grecaptcha.render(
                 recaptchaRef.current,
                 {
@@ -27,6 +26,8 @@ const About = () => {
                 },
             );
         };
+
+        window[recaptchaOnload] = renderRecaptcha;
 
         if (window.grecaptcha) {
             renderRecaptcha();
@@ -46,7 +47,7 @@ const About = () => {
 
         const script = document.createElement("script");
         script.id = "recaptcha-script";
-        script.src = "https://www.google.com/recaptcha/api.js?render=explicit";
+        script.src = `https://www.google.com/recaptcha/api.js?onload=${recaptchaOnload}&render=explicit`;
         script.async = true;
         script.defer = true;
         script.addEventListener("load", renderRecaptcha);
