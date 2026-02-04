@@ -28,7 +28,7 @@ const getInitialTheme = () => {
 
 const App = () => {
     const [theme, setTheme] = React.useState(getInitialTheme);
-    const currentYear = 2025;
+    const currentYear = 2026;
 
     React.useEffect(() => {
         document.documentElement.style.colorScheme = theme;
