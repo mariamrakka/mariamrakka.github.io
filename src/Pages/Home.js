@@ -148,6 +148,7 @@ const Home = () => {
                     >
                         <div className="focus-card-inner">
                             <div className="focus-card-face focus-card-front">
+                                <span className="focus-badge">Flip me</span>
                                 <svg
                                     className="focus-icon"
                                     viewBox="0 0 64 64"
