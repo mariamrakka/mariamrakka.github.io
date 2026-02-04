@@ -179,7 +179,7 @@ li {
 }
 
 .accordion-body {
-    background-color: var(--bg-color-bg);
+    background-color: var(--bg-color);
     color: var(--text-color);
     border-top: 0.1rem solid var(--border-color);
 }
@@ -245,6 +245,105 @@ li {
 
 .card-list a:hover {
     text-decoration: underline;
+}
+
+/* CV refinements */
+.cv-page {
+    --cv-surface: #f7f7f7;
+    --cv-surface-strong: #ffffff;
+    --cv-border: #d0d0d0;
+    --cv-accent: #111111;
+}
+
+.cv-page .accordion {
+    display: grid;
+    gap: 1rem;
+}
+
+.cv-page .accordion-item {
+    border: 0.08rem solid var(--cv-border);
+    border-radius: 0.85rem;
+    background-color: var(--cv-surface-strong);
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.4rem rgba(0, 0, 0, 0.08);
+}
+
+.cv-page .accordion-button {
+    background-color: var(--cv-surface);
+    color: var(--text-color);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 1rem 1.25rem;
+}
+
+.cv-page .accordion-button:not(.collapsed) {
+    background-color: var(--cv-surface-strong);
+}
+
+.cv-page .accordion-body {
+    background-color: var(--cv-surface-strong);
+    border-top: 0.08rem solid var(--cv-border);
+    padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.cv-page .card-section {
+    background-color: transparent;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.cv-page .card-item {
+    margin-bottom: 0;
+    padding: 1rem 1.2rem;
+    border-left: 0.2rem solid var(--cv-accent);
+    background-color: var(--cv-surface);
+    border-radius: 0.6rem;
+    box-shadow: none;
+}
+
+.cv-page .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.cv-page .card-subtitle {
+    font-size: 0.98rem;
+    color: #555555;
+    margin-bottom: 0.4rem;
+}
+
+.cv-page .card-description {
+    font-size: 0.98rem;
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.cv-page .card-list {
+    margin-left: 1rem;
+    line-height: 1.6;
+}
+
+.cv-page .card-list li {
+    font-size: 0.98rem;
+    margin-bottom: 0.35rem;
+}
+
+@media (max-width: 576px) {
+    .cv-page .accordion-button {
+        font-size: 1.15rem;
+        padding: 0.9rem 1rem;
+    }
+
+    .cv-page .accordion-body {
+        padding: 1rem;
+    }
+
+    .cv-page .card-item {
+        padding: 0.9rem 1rem;
+    }
 }
 
 .contact-wrapper {

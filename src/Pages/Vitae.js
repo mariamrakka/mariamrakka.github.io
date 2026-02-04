@@ -365,7 +365,7 @@ const Vitae = () => {
     ];
 
     return (
-        <div className="container home-container">
+        <div className="container home-container cv-page">
             <Header />
             <Accordion sections={sections} />
         </div>
