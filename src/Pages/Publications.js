@@ -2,9 +2,6 @@ import React from "react";
 import Header from "../Components/Header";
 
 const Publications = () => {
-    const scholarProfile =
-        "https://scholar.google.com/citations?user=Fb9_7EMAAAAJ&hl=en";
-
     return (
         <div className="container home-container">
             <Header />
@@ -12,7 +9,7 @@ const Publications = () => {
                 <ol className="card-list d-grid gap-3">
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.23919/DATE64628.2025.10992862"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -24,7 +21,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://www.proquest.com/openview/805ad66eff4ad6637725dd95dd432f98/1?pq-origsite=gscholar&cbl=18750&diss=y"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -35,7 +32,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.1109/TPAMI.2024.3394390"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -50,7 +47,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.1145/3695875"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -65,7 +62,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href="https://arxiv.org/abs/2411.01417"
+                            href="https://doi.org/10.48550/arXiv.2411.01417"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -76,7 +73,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.1109/LES.2024.3446912"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -88,7 +85,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.1109/TETC.2023.3261748"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -102,7 +99,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.1109/VLSI-SOC57769.2023.10321939"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -113,7 +110,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.23919/DATE56975.2023.10137006"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -130,7 +127,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://www.proquest.com/openview/da4f2ae734cfadfb4fbbc8efea2849b8/1?pq-origsite=gscholar&cbl=18750&diss=y"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -141,7 +138,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.1109/ISCAS51556.2021.9401540"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -153,7 +150,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.1109/TCSII.2020.3017477"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -167,7 +164,7 @@ const Publications = () => {
                     </li>
                     <li>
                         <a
-                            href={scholarProfile}
+                            href="https://doi.org/10.1109/ISCAS45731.2020.9181010"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
