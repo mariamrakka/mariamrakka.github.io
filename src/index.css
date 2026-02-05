@@ -123,15 +123,15 @@ li {
     box-shadow: inset 0 0.2rem 0.5rem rgba(255, 255, 255, 0.1),
         0 0.4rem 0.6rem rgba(0, 0, 0, 0.5);
     border-bottom: 0.1rem solid var(--nav-border);
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .navbar-nav .nav-link {
     transition: transform 0.3s ease, color 0.3s ease;
     text-align: center;
-    font-size: 1.05rem;
-    padding: 0.5rem 0.85rem;
+    font-size: 1.15rem;
+    padding: 0.65rem 1rem;
 }
 
 .navbar-nav .nav-link:hover {
