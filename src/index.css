@@ -14,6 +14,14 @@
     --nav-bg-end: rgba(220, 220, 220, 0.9);
     --nav-border: #cccccc;
     --nav-hover: #111111;
+    --text-xs: 0.85rem;
+    --text-sm: 1rem;
+    --text-base: 1.15rem;
+    --text-md: 1.35rem;
+    --text-lg: 1.6rem;
+    --text-xl: 2.05rem;
+    --text-2xl: 2.6rem;
+    --text-3xl: 3.4rem;
     --focus-outline: #222222;
     --chip-body: #f2f2f2;
     --chip-core: #d9d9d9;
@@ -94,7 +102,7 @@ body,
 .site-footer {
     text-align: center;
     padding: 1.1rem 1rem 1.6rem;
-    font-size: 0.8rem;
+    font-size: var(--text-xs);
     letter-spacing: 0.03em;
     color: var(--muted-text);
     border-top: 0.08rem solid var(--surface-border);
@@ -108,7 +116,7 @@ a {
 
 p,
 li {
-    font-size: 1.2rem;
+    font-size: var(--text-base);
     text-align: left;
 }
 
@@ -130,8 +138,8 @@ li {
 .navbar-nav .nav-link {
     transition: transform 0.3s ease, color 0.3s ease;
     text-align: center;
-    font-size: 1.725rem;
-    padding: 0.975rem 1.5rem;
+    font-size: var(--text-lg);
+    padding: 0.85rem 1.3rem;
 }
 
 .navbar-nav .nav-link:hover {
@@ -145,7 +153,7 @@ li {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 0.975rem;
+    padding: 0.7rem 0.95rem;
     margin-left: 0.2rem;
     color: inherit;
     cursor: pointer;
@@ -155,16 +163,15 @@ li {
 
 .theme-toggle:hover {
     transform: scale(1.05);
-    background-color: rgba(0, 0, 0, 0.08);
 }
 
 .theme-dark .theme-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: transparent;
 }
 
 .theme-icon {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 1.5rem;
+    height: 1.5rem;
     fill: none;
     stroke: currentColor;
     stroke-width: 1.6;
@@ -209,12 +216,12 @@ li {
 }
 
 .name {
-    font-size: 4rem;
+    font-size: var(--text-3xl);
     font-weight: bold;
 }
 
 .description {
-    font-size: 2rem;
+    font-size: var(--text-lg);
     text-align: center;
 }
 
@@ -243,7 +250,7 @@ li {
 }
 
 .focus-title {
-    font-size: 2rem;
+    font-size: var(--text-xl);
     margin-bottom: 1.5rem;
     letter-spacing: 0.04em;
 }
@@ -271,7 +278,7 @@ li {
 }
 
 .focus-line .chip-text {
-    font-size: 20px;
+    font-size: var(--text-md);
     font-weight: 600;
     fill: var(--chip-text);
     font-family: "Times New Roman", Times, serif;
@@ -355,7 +362,7 @@ li {
     transform: translate(-20%, -35%);
     background-color: var(--surface-inverse);
     color: var(--surface-inverse-text);
-    font-size: 0.65rem;
+    font-size: var(--text-xs);
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 0.25rem 0.45rem;
@@ -365,7 +372,7 @@ li {
 
 .focus-card-back {
     transform: rotateY(180deg);
-    font-size: 0.92rem;
+    font-size: var(--text-sm);
     line-height: 1.4;
     text-align: center;
     color: var(--text-color);
@@ -392,7 +399,7 @@ li {
 }
 
 .focus-card-title {
-    font-size: 1rem;
+    font-size: var(--text-sm);
     letter-spacing: 0.02em;
     line-height: 1.2;
     overflow-wrap: anywhere;
@@ -420,7 +427,7 @@ li {
     }
 
     .focus-title {
-        font-size: 1.7rem;
+        font-size: var(--text-lg);
     }
 
     .focus-grid {
@@ -439,7 +446,7 @@ li {
     }
 
     .focus-card-title {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         letter-spacing: 0.01em;
     }
 
@@ -454,13 +461,13 @@ li {
     }
 
     .focus-badge {
-        font-size: 0.55rem;
+        font-size: 0.6rem;
         top: 0.5rem;
         left: 0.5rem;
     }
 
     .focus-card-back {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         line-height: 1.3;
         letter-spacing: 0;
         text-wrap: balance;
@@ -487,12 +494,12 @@ li {
     }
 
     .focus-card-back {
-        font-size: 0.58rem;
+        font-size: 0.65rem;
     }
 }
 
 .bio-section h2 {
-    font-size: 2rem;
+    font-size: var(--text-xl);
     color: var(--text-color);
 }
 
@@ -518,7 +525,7 @@ li {
 }
 
 .custom-btn {
-    font-size: 0.6rem;
+    font-size: var(--text-xs);
     padding: 0.25rem 0.5rem;
     border-radius: 0.2rem;
 }
@@ -541,7 +548,7 @@ li {
 .accordion-button {
     background-color: var(--card-bg);
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: var(--text-lg);
 }
 
 .accordion-button:not(.collapsed) {
@@ -596,26 +603,26 @@ li {
 .card-title {
     color: var(--text-color);
     margin-bottom: 0.2rem;
-    font-size: 1.2em;
+    font-size: var(--text-md);
 }
 
 .card-subtitle {
     color: var(--muted-text);
     margin-bottom: 0.5rem;
-    font-size: 1.1em;
+    font-size: var(--text-base);
 }
 
 .card-description {
     color: var(--text-color);
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: var(--text-base);
 }
 
 .card-subsection-title {
     color: var(--text-color);
     margin-top: 0rem;
     margin-bottom: 5px;
-    font-size: 1.1rem;
+    font-size: var(--text-md);
 }
 
 .card-list {
@@ -625,7 +632,7 @@ li {
 }
 
 .card-list li {
-    font-size: 1rem;
+    font-size: var(--text-base);
 }
 
 .card-list a:hover {
@@ -656,7 +663,7 @@ li {
 .cv-page .accordion-button {
     background-color: var(--cv-surface);
     color: var(--text-color);
-    font-size: 1.35rem;
+    font-size: var(--text-md);
     font-weight: 600;
     letter-spacing: 0.02em;
     padding: 1rem 1.25rem;
@@ -689,19 +696,19 @@ li {
 }
 
 .cv-page .card-title {
-    font-size: 1.1rem;
+    font-size: var(--text-md);
     font-weight: 600;
     margin-bottom: 0.25rem;
 }
 
 .cv-page .card-subtitle {
-    font-size: 0.98rem;
+    font-size: var(--text-base);
     color: var(--muted-text);
     margin-bottom: 0.4rem;
 }
 
 .cv-page .card-description {
-    font-size: 0.98rem;
+    font-size: var(--text-base);
     color: var(--muted-text);
     margin-bottom: 0.5rem;
 }
@@ -712,13 +719,13 @@ li {
 }
 
 .cv-page .card-list li {
-    font-size: 0.98rem;
+    font-size: var(--text-base);
     margin-bottom: 0.35rem;
 }
 
 @media (max-width: 576px) {
     .cv-page .accordion-button {
-        font-size: 1.15rem;
+        font-size: var(--text-base);
         padding: 0.9rem 1rem;
     }
 
@@ -741,7 +748,7 @@ li {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: var(--text-base);
     margin-bottom: 30px;
     color: var(--text-color);
 }
@@ -791,7 +798,7 @@ li {
 }
 
 .contact-page h1 {
-    font-size: 2.4rem;
+    font-size: var(--text-2xl);
     letter-spacing: 0.04em;
     margin-bottom: 1.5rem;
 }
@@ -833,7 +840,7 @@ li {
 }
 
 .contact-label {
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted-text);
@@ -845,7 +852,7 @@ li {
     border: 0.08rem solid var(--surface-border);
     border-radius: 0.5rem;
     padding: 0.7rem 0.85rem;
-    font-size: 1rem;
+    font-size: var(--text-base);
     background-color: var(--surface-strong);
     color: var(--text-color);
     font-family: "Times New Roman", Times, serif;
@@ -875,7 +882,7 @@ li {
     padding: 0.7rem 1.8rem;
     background-color: var(--surface-inverse);
     color: var(--surface-inverse-text);
-    font-size: 0.8rem;
+    font-size: var(--text-sm);
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -911,7 +918,7 @@ li {
 }
 
 .contact-page .contact-row strong {
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted-text);
@@ -930,7 +937,7 @@ li {
 
 @media (max-width: 576px) {
     .contact-page h1 {
-        font-size: 2rem;
+        font-size: var(--text-xl);
     }
 
     .contact-page .contact-card-item {
