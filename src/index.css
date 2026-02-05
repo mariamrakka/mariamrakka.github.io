@@ -289,9 +289,9 @@ li {
     stroke-width: 2.4;
     stroke-linecap: round;
     opacity: 0.7;
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
-    animation: focus-draw 2.4s ease-in-out 0.6s 1 forwards;
+    stroke-dasharray: 10 12;
+    stroke-dashoffset: 0;
+    animation: chip-flow 2.6s linear infinite;
 }
 
 .focus-line .chip-node {
@@ -398,9 +398,12 @@ li {
     overflow-wrap: anywhere;
 }
 
-@keyframes focus-draw {
-    to {
+@keyframes chip-flow {
+    from {
         stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -120;
     }
 }
 
