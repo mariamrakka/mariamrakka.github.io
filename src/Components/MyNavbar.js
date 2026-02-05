@@ -31,7 +31,7 @@ const MyNavbar = ({ theme, onThemeChange }) => {
                                 Publications
                             </Nav.Link>
                             <Nav.Link as={NavLink} to="/about">
-                                About
+                                Contact
                             </Nav.Link>
                             <button
                                 type="button"
