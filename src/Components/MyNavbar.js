@@ -25,7 +25,7 @@ const MyNavbar = ({ theme, onThemeChange }) => {
                                 Home
                             </Nav.Link>
                             <Nav.Link as={NavLink} to="/vitae">
-                                Curriculum Vitae
+                                CV
                             </Nav.Link>
                             <Nav.Link as={NavLink} to="/publications">
                                 Publications
