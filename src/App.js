@@ -32,6 +32,8 @@ const App = () => {
 
     React.useEffect(() => {
         document.documentElement.style.colorScheme = theme;
+        document.documentElement.classList.remove("theme-light", "theme-dark");
+        document.documentElement.classList.add(`theme-${theme}`);
         window.localStorage.setItem("theme", theme);
     }, [theme]);
 
